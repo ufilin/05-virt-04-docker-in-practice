@@ -6,7 +6,8 @@ Docker Compose version v5.0.2
   
 > Результат выполнения команды docker-compose --version  
 bash: /usr/local/bin/docker-compose: No such file or directory  
-  ![Изображение с заголовком](Задача 0.jpg "Задача 0")
+
+[Изображение с заголовком](Задача 0.JPG "Задача 0")
 ###
 ###
 ###
