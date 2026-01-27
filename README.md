@@ -116,13 +116,37 @@ INFO: Waiting for application startup.
 INFO: Application startup complete.  
 INFO: 127.0.0.1:54162 - “GET / HTTP/1.1” 200 OK  
   
-в другом терминале:  
+> в другом терминале:  
 (venv) root@debian:/home/debian/05-virt-04-docker-in-practice/fork# curl http://0.0.0.0:8090/  
 curl: (7) Failed to connect to 0.0.0.0 port 8090 after 0 ms: Couldn’t connect to server  
 (venv) root@debian:/home/debian/05-virt-04-docker-in-practice/fork# curl http://0.0.0.0:5000/  
 "TIME: 2026-01-28 02:25:04    
 
+>> Добавление управления названием таблицы через ENV переменную
+
+# --- 1. Конфигурация ---  
+# Считываем конфигурацию БД из переменных окружения  
+db_host = os.environ.get('DB_HOST', '127.0.0.1')  
+db_user = os.environ.get('DB_USER', 'app')  
+db_password = os.environ.get('DB_PASSWORD', 'very_strong')  
+db_name = os.environ.get('DB_NAME', 'example')  
+db_table = os.environ.get('TABLE_NAME', 'requests') <--Добавление переменной  
   
+@asynccontextmanager  
+async def lifespan(app: FastAPI):  
+    # Код, который выполнится перед запуском приложения  
+    print("Приложение запускается...")  
+    try:  
+        with get_db_connection() as db:  
+            cursor = db.cursor()  
+            create_table_query = f"""  
+            CREATE TABLE IF NOT EXISTS {db_name}.{db_table} ( <--Правка в коде  
+                id INT AUTO_INCREMENT PRIMARY KEY,  
+                request_date DATETIME,  
+                request_ip VARCHAR(255)  
+            )  
+            """  
+   
 ### Задача 2  
   
 
