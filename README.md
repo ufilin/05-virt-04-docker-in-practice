@@ -11,7 +11,12 @@ bash: /usr/local/bin/docker-compose: No such file or directory
   <img src="Задача 0.JPG" width="800">
 </p>
 
-### Задача 1
+### Задача 1  
+
+> Fork репозитория  
+  
+<https://github.com/ufilin/shvirtd-example-python/tree/main>  
+  
 > Файл Dockerfile.python  
   
 root@debian:/home/debian/05-virt-04-docker-in-practice/fork# cat Dockerfile.python  
@@ -78,10 +83,9 @@ c0e0ae4047da   3 minutes ago   CMD ["uvicorn" "main:app" "--host" "0.0.0.0"…  
 <missing>      2 weeks ago     # debian.sh --arch 'amd64' out/ 'trixie' '@1…   78.6MB    debuerreotype 0.17  
 root@debian:/home/debian/05-virt-04-docker-in-practice/fork#   
   
+### Задача 2  
   
 
-
-###
 ###
 ###
 ###
