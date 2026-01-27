@@ -124,13 +124,13 @@ curl: (7) Failed to connect to 0.0.0.0 port 8090 after 0 ms: Couldn’t connect 
 
 >> Добавление управления названием таблицы через ENV переменную
 
-# --- 1. Конфигурация ---  
-# Считываем конфигурацию БД из переменных окружения  
+--- 1. Конфигурация ---  
+Считываем конфигурацию БД из переменных окружения  
 db_host = os.environ.get('DB_HOST', '127.0.0.1')  
 db_user = os.environ.get('DB_USER', 'app')  
 db_password = os.environ.get('DB_PASSWORD', 'very_strong')  
 db_name = os.environ.get('DB_NAME', 'example')  
-db_table = os.environ.get('TABLE_NAME', 'requests') <--Добавление переменной  
+db_table = os.environ.get('TABLE_NAME', 'requests') <--### Добавление переменной  
   
 @asynccontextmanager  
 async def lifespan(app: FastAPI):  
@@ -140,7 +140,7 @@ async def lifespan(app: FastAPI):
         with get_db_connection() as db:  
             cursor = db.cursor()  
             create_table_query = f"""  
-            CREATE TABLE IF NOT EXISTS {db_name}.{db_table} ( <--Правка в коде  
+            CREATE TABLE IF NOT EXISTS {db_name}.{db_table} ( <--### Правка в коде  
                 id INT AUTO_INCREMENT PRIMARY KEY,  
                 request_date DATETIME,  
                 request_ip VARCHAR(255)  
