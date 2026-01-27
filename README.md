@@ -8,7 +8,7 @@ Docker Compose version v5.0.2
 bash: /usr/local/bin/docker-compose: No such file or directory  
 
 <p align="center">
-  <img src="Задача 0.jpg" width="400">
+  <img src="Задача 0.JPG" width="400">
 </p>
 
 ###
