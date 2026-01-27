@@ -122,7 +122,7 @@ curl: (7) Failed to connect to 0.0.0.0 port 8090 after 0 ms: Couldn’t connect 
 (venv) root@debian:/home/debian/05-virt-04-docker-in-practice/fork# curl http://0.0.0.0:5000/  
 "TIME: 2026-01-28 02:25:04    
 
->> Добавление управления названием таблицы через ENV переменную
+> Добавление управления названием таблицы через ENV переменную
 
 --- 1. Конфигурация ---  
 Считываем конфигурацию БД из переменных окружения  
