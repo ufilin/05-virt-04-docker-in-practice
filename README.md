@@ -120,7 +120,7 @@ INFO: 127.0.0.1:54162 - “GET / HTTP/1.1” 200 OK
 (venv) root@debian:/home/debian/05-virt-04-docker-in-practice/fork# curl http://0.0.0.0:8090/  
 curl: (7) Failed to connect to 0.0.0.0 port 8090 after 0 ms: Couldn’t connect to server  
 (venv) root@debian:/home/debian/05-virt-04-docker-in-practice/fork# curl http://0.0.0.0:5000/  
-"TIME: 2026-01-28 02:25:04    
+"TIME: 2026-01-28 02:25:04  
 
 > Добавление управления названием таблицы через ENV переменную
 
