@@ -28,6 +28,26 @@ RUN pip install --no-cache-dir -r requirements.txt
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "5000"]  
 root@debian:/home/debian/05-virt-04-docker-in-practice/fork#  
   
+> Файл .dockerignore  
+  
+root@debian:/home/debian/05-virt-04-docker-in-practice/fork# cat .dockerignore  
+compose.yaml  
+Dockerfile  
+Dockerfile.python  
+.dockerignore  
+.env  
+.git  
+.gitignore  
+/haproxy  
+init.sql  
+LICENSE  
+main.py  
+/nginx  
+proxy.yaml  
+README.md  
+schema.pdf  
+root@debian:/home/debian/05-virt-04-docker-in-practice/fork#   
+  
   
 > Сборка образа:  
   
