@@ -102,6 +102,26 @@ c0e0ae4047da   3 minutes ago   CMD ["uvicorn" "main:app" "--host" "0.0.0.0"…  
 <missing>      2 weeks ago     ENV PATH=/usr/local/bin:/usr/local/sbin:/usr…   0B        buildkit.dockerfile.v0  
 <missing>      2 weeks ago     # debian.sh --arch 'amd64' out/ 'trixie' '@1…   78.6MB    debuerreotype 0.17  
 root@debian:/home/debian/05-virt-04-docker-in-practice/fork#   
+
+> запуск web приложения без docker  
+  
+(venv) root@debian:/home/debian/05-virt-04-docker-in-practice/fork# uvicorn main:app --host 0.0.0.0 --port 5000 --reload  
+INFO: Will watch for changes in these directories: [’/home/debian/05-virt-04-docker-in-practice/fork’]  
+INFO: Uvicorn running on http://0.0.0.0:5000 (Press CTRL+C to quit)  
+INFO: Started reloader process [194872] using WatchFiles  
+INFO: Started server process [194883]  
+INFO: Waiting for application startup.  
+Приложение запускается…  
+Соединение с БД установлено и таблица ‘requests’ готова к работе.  
+INFO: Application startup complete.  
+INFO: 127.0.0.1:54162 - “GET / HTTP/1.1” 200 OK  
+  
+в другом терминале:  
+(venv) root@debian:/home/debian/05-virt-04-docker-in-practice/fork# curl http://0.0.0.0:8090/  
+curl: (7) Failed to connect to 0.0.0.0 port 8090 after 0 ms: Couldn’t connect to server  
+(venv) root@debian:/home/debian/05-virt-04-docker-in-practice/fork# curl http://0.0.0.0:5000/  
+"TIME: 2026-01-28 02:25:04    
+
   
 ### Задача 2  
   
