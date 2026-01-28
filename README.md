@@ -148,8 +148,14 @@ async def lifespan(app: FastAPI):
             """  
    
 ### Задача 2  
-  
 
-###
+> Отчёт сканирования  
+  
+<https://github.com/ufilin/05-virt-04-docker-in-practice/blob/main/vulnerabilities.csv>  
+  
+### Задача 3
+  
+  
+  
 ###
 ###
