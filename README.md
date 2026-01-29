@@ -161,7 +161,15 @@ async def lifespan(app: FastAPI):
   <img src="Задача 3.PNG" width="1000">
 </p>
 
+### Задача 4  
   
+> Результат  
   
-###
-###
+<p align="center">
+  <img src="Задача 4.PNG" width="1000">
+</p>
+
+  
+### Задача 5  
+
+> 
