@@ -173,3 +173,36 @@ async def lifespan(app: FastAPI):
 ### Задача 5  
 
 > 
+  
+### Задача 6  
+  
+> Загружаем  образый на ПК и запускаем dive  
+  
+<p align="center">
+  <img src="Задача 6(download).png" width="1000">
+</p>
+  
+> Запускаем dive и находим идентификатор нужного нам слоя  
+  
+<p align="center">
+  <img src="Задача 6(dive).png" width="1000">
+</p>
+  
+> Сохраняем образ в архиве  
+  
+<p align="center">
+  <img src="Задача 6(docker save).png" width="1000">
+</p>
+  
+> Разархивируем и находим слой с нужным идентификатором  
+  
+<p align="center">
+  <img src="Задача 6(bin file).png" width="1000">
+</p>
+  
+### Задача 6.1  
+  
+
+
+  
+
