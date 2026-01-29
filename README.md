@@ -202,7 +202,14 @@ async def lifespan(app: FastAPI):
   
 ### Задача 6.1  
   
-
+> Использование docker cp для копирования слоя  
+  
+<p align="center">
+  <img src="Задача 6.1.png" width="1000">
+</p>
+  
+### Задача 6.2  
+  
+### Задача 7  
 
   
-
